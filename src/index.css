@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-background font-sans text-gray-800;
+}
+
+@layer components {
+  .sidebar-link {
+    @apply flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-600 hover:bg-primary-50 hover:text-primary-600 transition-colors duration-200;
+  }
+  
+  .sidebar-link.active {
+    @apply bg-primary-50 text-primary-600 font-medium;
+  }
+  
+  .health-indicator {
+    @apply absolute flex items-center justify-center h-6 w-6 rounded-full bg-white shadow-md cursor-pointer transition-transform duration-200 hover:scale-110;
+  }
+  
+  .health-indicator.healthy {
+    @apply border-2 border-success;
+  }
+  
+  .health-indicator.warning {
+    @apply border-2 border-warning;
+  }
+  
+  .health-indicator.critical {
+    @apply border-2 border-error;
+  }
+  
+  .calendar-day {
+    @apply h-10 w-10 flex items-center justify-center rounded-full text-sm;
+  }
+  
+  .calendar-day.has-appointment {
+    @apply bg-primary-100 text-primary-800;
+  }
+  
+  .calendar-day.today {
+    @apply bg-primary-600 text-white;
+  }
+  
+  .appointment-time {
+    @apply text-xs bg-primary-50 text-primary-700 px-2 py-0.5 rounded-md;
+  }
+  
+  .status-badge {
+    @apply text-xs px-2 py-0.5 rounded-full font-medium;
+  }
+  
+  .status-badge.healthy {
+    @apply bg-green-100 text-green-800;
+  }
+  
+  .status-badge.warning {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+  
+  .status-badge.critical {
+    @apply bg-red-100 text-red-800;
+  }
+}

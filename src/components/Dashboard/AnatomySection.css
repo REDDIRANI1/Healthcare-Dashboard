@@ -1,0 +1,32 @@
+.anatomy-container {
+  max-width: 100%; /* Remove fixed max-width */
+  padding: 0 1rem;  /* Add padding for mobile */
+}
+
+.anatomy-image {
+  width: 100%;
+  max-width: 900px; /* Optional: cap the image width */
+  margin: 0 auto;
+}
+@media (min-width: 1024px) {
+  .anatomy-image {
+    max-width: 1400px;
+  }
+}
+
+
+
+.indicator-bubble {
+  position: absolute;
+  padding: 1px 17px;       /* Increased vertical padding for height */
+  color: #fff;
+  font-size: 12px;
+  border-radius: 16px;
+  font-weight: 500;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  /* min-height: 10px;        */
+}
