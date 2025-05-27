@@ -3,7 +3,7 @@ import { navigationLinks } from '../../data/navigationLinks';
 
 const Sidebar: React.FC = () => {
   const mainLinks = navigationLinks.slice(0, 5); // Dashboard to Statistics
-  const toolLinks = navigationLinks.slice(5, 8); // Tools to Support
+  const toolLinks = navigationLinks.slice(5, 7); // Chat and Support
   const settingsLink = navigationLinks.find(link => link.id === 'settings');
 
   return (
@@ -11,7 +11,9 @@ const Sidebar: React.FC = () => {
       {/* Top Links */}
       <div>
         <div className="mb-4">
-          <h2 className="text-xs uppercase text-gray-500 font-semibold tracking-wider px-4 mb-2">General</h2>
+          <h2 className="text-xs uppercase text-gray-500 font-semibold tracking-wider px-4 mb-2">
+            General 
+          </h2>
           <nav>
             <ul className="space-y-1">
               {mainLinks.map((link) => (
@@ -26,8 +28,15 @@ const Sidebar: React.FC = () => {
           </nav>
         </div>
 
-        {/* Tool Links Section (with top margin for spacing) */}
-        <nav className="mt-6">
+        {/* Tools Section Heading */}
+        <div className="mt-6 mb-2 px-4">
+          <h2 className="text-xs uppercase text-gray-500 font-semibold tracking-wider">
+            Tools
+          </h2>
+        </div>
+
+        {/* Tool Links */}
+        <nav>
           <ul className="space-y-1">
             {toolLinks.map((link) => (
               <li key={link.id}>
@@ -41,7 +50,7 @@ const Sidebar: React.FC = () => {
         </nav>
       </div>
 
-      {/* Settings pinned to bottom (no divider) */}
+      {/* Settings at Bottom */}
       {settingsLink && (
         <div className="pt-4">
           <a href="#" className="sidebar-link">
@@ -53,5 +62,6 @@ const Sidebar: React.FC = () => {
     </aside>
   );
 };
+
 
 export default Sidebar;

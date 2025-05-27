@@ -4,9 +4,8 @@ import {
   Calendar, 
   CalendarClock, 
   BarChart2, 
-  ClipboardList, 
   MessageSquare, 
-  HelpCircle, 
+  Phone,
   Settings 
 } from 'lucide-react';
 
@@ -45,11 +44,6 @@ export const navigationLinks: NavLink[] = [
     icon: BarChart2,
   },
   {
-    id: 'tests',
-    name: 'Tools',
-    icon: ClipboardList,
-  },
-  {
     id: 'chat',
     name: 'Chat',
     icon: MessageSquare,
@@ -57,7 +51,7 @@ export const navigationLinks: NavLink[] = [
   {
     id: 'support',
     name: 'Support',
-    icon: HelpCircle,
+    icon: Phone,
   },
   {
     id: 'settings',
